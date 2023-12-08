@@ -1,0 +1,5 @@
+<category name="AI" colour="#c51a4a" css-icon="customIcon fad fa-sparkles">
+    <label text="AI"></label>
+
+    <block type="import_ai"></block>
+</category>

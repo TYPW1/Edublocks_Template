@@ -1,0 +1,43 @@
+from pyscript import window, document
+from pyodide.ffi import create_proxy
+
+class Assistant:
+    def __init__(self):
+        self.chat = window.webllm.ChatModule.new()
+
+    def _update_progress(self, report, indicator):
+        indicator.value = report.progress * 100
+
+    async def setup(self, model):
+        # Create Dialog
+        loading = document.createElement("dialog")
+
+        # Create Dialog Title
+        loading_title = document.createElement("h3")
+        loading_title.textContent = "Loading AI Model..."
+
+        # Create Progress Indicator
+        loading_progress = document.createElement("progress")
+        loading_progress.max = 100
+
+        # Add Dialog Title & Progress Indicator
+        loading.appendChild(loading_title)
+        loading.appendChild(loading_progress)
+
+        # Add Dialog to Document
+        document.body.appendChild(loading)
+
+        # Show Loading Dialog
+        loading.showModal()
+
+        # Update Progress Indicator Value
+        self.chat.setInitProgressCallback(create_proxy(lambda report: self._update_progress(report, loading_progress)))
+
+        # Load AI Model
+        await self.chat.reload(model)
+
+        # Close Loading Dialog
+        loading.close()
+
+    async def ask(self, question):
+        return await self.chat.generate(question)
