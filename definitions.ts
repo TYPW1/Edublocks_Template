@@ -9,3 +9,30 @@ Blockly.Blocks['import_ai'] = {
       this.setColour(aiColor);
     }
 };
+
+Blockly.Blocks['ai_setup'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable("chatbot"), "chatbot")
+        .appendField(" = Assistant()");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(aiColor);
+  }
+};
+
+Blockly.Blocks['ai_ask'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable("chatbot"), "chatbot")
+        .appendField(".ask(");
+    this.appendValueInput("parameters")
+        .setCheck(null);
+    this.appendDummyInput()
+        .appendField(")");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(aiColor);
+  }
+};  
