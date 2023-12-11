@@ -1,11 +1,11 @@
 Blockly.Python['import_ai'] = function() {
-    var code = 'from ai import Assistant\n';
+    var code = 'import ai\n';
     return code;
 };
 
 Blockly.Python['ai_init'] = function(block) {
     var chatbot = Blockly.Python.nameDB_.getName(block.getFieldValue('chatbot'), Blockly.VARIABLE_CATEGORY_NAME);
-    var code = `${chatbot} = Assistant()\n`;
+    var code = `${chatbot} = ai.Assistant()\n`;
     return code;
 };
 

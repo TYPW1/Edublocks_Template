@@ -3,7 +3,7 @@ const aiColor = "#c51a4a";
 Blockly.Blocks['import_ai'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("from ai import Assistant");
+          .appendField("import ai");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(aiColor);
@@ -14,7 +14,7 @@ Blockly.Blocks['ai_init'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(new Blockly.FieldVariable("chatbot"), "chatbot")
-        .appendField(" = Assistant()");
+        .appendField(" = ai.Assistant()");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(aiColor);
