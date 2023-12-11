@@ -10,7 +10,7 @@ Blockly.Blocks['import_ai'] = {
     }
 };
 
-Blockly.Blocks['ai_setup'] = {
+Blockly.Blocks['ai_init'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(new Blockly.FieldVariable("chatbot"), "chatbot")
@@ -21,9 +21,22 @@ Blockly.Blocks['ai_setup'] = {
   }
 };
 
+Blockly.Blocks['ai_setup'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("await ")
+        .appendField(new Blockly.FieldVariable("chatbot"), "chatbot")
+        .appendField(".setup()");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(aiColor);
+  }
+};
+
 Blockly.Blocks['ai_ask'] = {
   init: function() {
     this.appendDummyInput()
+        .appendField("await ")
         .appendField(new Blockly.FieldVariable("chatbot"), "chatbot")
         .appendField(".ask(");
     this.appendValueInput("parameters")
@@ -31,8 +44,7 @@ Blockly.Blocks['ai_ask'] = {
     this.appendDummyInput()
         .appendField(")");
     this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setOutput(true, null);
     this.setColour(aiColor);
   }
 };  

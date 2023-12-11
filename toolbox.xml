@@ -3,12 +3,14 @@
 
     <block type="import_ai"></block>
 
+    <block type="ai_init"></block>
+
     <block type="ai_setup"></block>
 
     <block type="ai_ask">
         <value name="parameters">
             <shadow type="parameters">
-                <mutation color="#1DB954" items="1" limit="1" inputType="string" />
+                <mutation color="#c51a4a" items="1" limit="1" inputType="string" />
                 <value name="input_1">
                     <shadow type="inline_string">
                         <field name="value">What is the capital of England?</field>
