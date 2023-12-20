@@ -5,7 +5,8 @@ class Assistant:
     def __init__(self, model="red_pajama"):
         self.chat = window.webllm.ChatModule.new()
         self.models = {
-            "red_pajama" : "RedPajama-INCITE-Chat-3B-v1-q4f32_1"
+            "red_pajama" : "RedPajama-INCITE-Chat-3B-v1-q4f32_1",
+            "llama_v2" : "Llama-2-7b-chat-hf-q4f32_1"
         }
         self.model = model
 

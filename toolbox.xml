@@ -3,7 +3,16 @@
 
     <block type="import_ai"></block>
 
-    <block type="ai_init"></block>
+    <block type="ai_init">
+        <value name="parameters">
+            <shadow type="parameters">
+                <mutation color="#c51a4a" items="1" limit="1" inputType="string" />
+                <value name="input_1">
+                    <shadow type="ai_model"></shadow>
+                </value>
+            </shadow>
+        </value>
+    </block>
 
     <block type="ai_setup"></block>
 
