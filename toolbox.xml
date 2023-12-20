@@ -8,7 +8,7 @@
             <shadow type="parameters">
                 <mutation color="#c51a4a" items="1" limit="1" inputType="string" />
                 <value name="input_1">
-                    <shadow type="ai_model"></shadow>
+                    <block type="ai_model"></block>
                 </value>
             </shadow>
         </value>
