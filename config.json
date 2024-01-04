@@ -4,5 +4,5 @@
         "ai.py"
     ],
     "interpreter": "py",
-    "head": "<script type=\"importmap\">{ \"imports\": { \"perf_hooks\": \"https://cdn.statically.io/gh/edublocks/edublocks-ai/main/hooks.js\" } }</script><script type=\"module\">import * as webllm from \"https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm/lib/index.js\"; globalThis.webllm = webllm;</script>"
+    "head": "<script type=\"importmap\">{ \"imports\": { \"perf_hooks\": \"https://cdn.jsdelivr.net/gh/edublocks/edublocks-ai/hooks.js\" } }</script><script type=\"module\">import * as webllm from \"https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm/lib/index.js\"; globalThis.webllm = webllm;</script>"
 }
