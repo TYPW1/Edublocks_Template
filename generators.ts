@@ -19,7 +19,7 @@ Blockly.Python['ai_setup'] = function(block) {
 Blockly.Python['ai_add_prompt'] = function(block) {
     var chatbot = Blockly.Python.nameDB_.getName(block.getFieldValue('chatbot'), Blockly.VARIABLE_CATEGORY_NAME);
     var parameters = Blockly.Python.valueToCode(block, 'parameters', 0);
-    var code = `await ${chatbot}.add_prompt(${parameters})`;
+    var code = `await ${chatbot}.add_prompt(${parameters})\n`;
     return code;
 };  
 
