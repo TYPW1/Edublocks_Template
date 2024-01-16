@@ -37,6 +37,23 @@ Blockly.Blocks['ai_setup'] = {
   }
 };
 
+Blockly.Blocks['ai_add_prompt'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("await ")
+        .appendField(new Blockly.FieldVariable("chatbot"), "chatbot")
+        .appendField(".add_prompt(");
+    this.appendValueInput("parameters")
+        .setCheck(null);
+    this.appendDummyInput()
+        .appendField(")");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(aiColor);
+  }
+};  
+
 Blockly.Blocks['ai_ask'] = {
   init: function() {
     this.appendDummyInput()

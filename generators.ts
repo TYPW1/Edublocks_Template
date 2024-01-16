@@ -16,6 +16,13 @@ Blockly.Python['ai_setup'] = function(block) {
     return code;
 };
 
+Blockly.Python['ai_add_prompt'] = function(block) {
+    var chatbot = Blockly.Python.nameDB_.getName(block.getFieldValue('chatbot'), Blockly.VARIABLE_CATEGORY_NAME);
+    var parameters = Blockly.Python.valueToCode(block, 'parameters', 0);
+    var code = `await ${chatbot}.add_prompt(${parameters})`;
+    return code;
+};  
+
 Blockly.Python['ai_ask'] = function(block) {
     var chatbot = Blockly.Python.nameDB_.getName(block.getFieldValue('chatbot'), Blockly.VARIABLE_CATEGORY_NAME);
     var parameters = Blockly.Python.valueToCode(block, 'parameters', 0);

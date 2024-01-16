@@ -46,3 +46,6 @@ class Assistant:
 
     async def ask(self, question):
         return await self.chat.generate(question)
+
+    async def add_prompt(self, prompt):
+        await self.chat.generate(prompt)
