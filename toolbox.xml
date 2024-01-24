@@ -16,19 +16,6 @@
 
     <block type="ai_setup"></block>
 
-    <block type="ai_add_prompt">
-        <value name="parameters">
-            <shadow type="parameters">
-                <mutation color="#c51a4a" items="1" limit="1" inputType="string" />
-                <value name="input_1">
-                    <shadow type="inline_string">
-                        <field name="value">Speak like a pirate</field>
-                    </shadow>
-                </value>
-            </shadow>
-        </value>
-    </block>
-
     <block type="ai_ask">
         <value name="parameters">
             <shadow type="parameters">
