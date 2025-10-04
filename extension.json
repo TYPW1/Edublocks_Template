@@ -1,0 +1,19 @@
+{
+    "name": "Greeter",
+    "description": "An extension to greet people.",
+    "pip": "edublocks-ext-greeter",
+    "blocks": [
+        {
+            "id": "greet",
+            "text": "greet person %1",
+            "code": "greet('%1')",
+            "return": "string",
+            "inputs": [
+                {
+                    "type": "string",
+                    "default": "World"
+                }
+            ]
+        }
+    ]
+}
