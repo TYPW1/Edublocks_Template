@@ -1,4 +1,5 @@
 {
+    "mode": "python",
     "name": "Greeter",
     "description": "An extension to greet people.",
     "pip": "edublocks-ext-greeter",
@@ -17,3 +18,4 @@
         }
     ]
 }
+
